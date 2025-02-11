@@ -1,0 +1,9 @@
+1. 安装nodejs
+2. cmd进入console-vue目录
+3. 安装yarn
+	npm install -g yarn
+4. 下载依赖
+	yarn install 
+5. 检查 vue.config.js 配置文件中 target 是否为：http://127.0.0.1:9000
+6. 启动项目
+	yarn serve
