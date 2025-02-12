@@ -12,4 +12,8 @@
     <artifactId>ticket-service-frameworks</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>base</module>
+    </modules>
+
 </project>
