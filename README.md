@@ -13,6 +13,7 @@
 │   └── ticket_service_spotless_formatter.xml  || -- #  格式化规则配置
 ├── frameworks  || -- #  基础架构组件库
 │   ├── base  || -- #  顶层抽象基础组件 : 全局常量 初始化事件 jackson安全模式 单例对象池 自定义容器...
+│   ├── convention  || -- #  项目规约组件 : 异常码 异常体系 封装分页 响应体...
 │   └── pom.xml
 ├── resources  || -- # 数据库初始化资源
 │   ├── data  || -- # 数据库数据初始化
