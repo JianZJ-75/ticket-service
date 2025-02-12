@@ -11,10 +11,42 @@
 
     <properties>
         <java.version>17</java.version>
+        <!--基础框架-->
         <spring-boot.version>3.0.7</spring-boot.version>
+        <!--分布式框架-->
         <spring-cloud.version>2022.0.3</spring-cloud.version>
+        <!--alibaba分布式框架-->
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
+        <!--持久层框架-mybatis-->
         <mybatis-spring-boot-starter.version>3.0.2</mybatis-spring-boot-starter.version>
+        <!--数据库生态系统-->
+        <shardingsphere.version>5.3.2</shardingsphere.version>
+        <!--jwt令牌-->
+        <jjwt.version>0.9.1</jjwt.version>
+        <!--JSON序列化工具-->
+        <fastjson2.version>2.0.36</fastjson2.version>
+        <!--持久层框架-mp-->
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <!--Java bean间映射与转换框架-->
+        <dozer-core.version>6.5.2</dozer-core.version>
+        <!--工具包-->
+        <hutool-all.version>5.8.27</hutool-all.version>
+        <!--redis Java客户端-->
+        <redisson.version>3.21.3</redisson.version>
+        <!--google提供的Java开源库-->
+        <guava.version>30.0-jre</guava.version>
+        <!--分布式定时任务框架-->
+        <xxl-job.version>2.3.1</xxl-job.version>
+        <!--支付宝框架-->
+        <alipay-sdk-java.version>4.38.10.ALL</alipay-sdk-java.version>
+        <!--消息队列-->
+        <rocketmq-spring-boot-starter.version>2.2.3</rocketmq-spring-boot-starter.version>
+        <!--增强版ThreadLocal-->
+        <transmittable-thread-local.version>2.14.2</transmittable-thread-local.version>
+        <!--动态线程池框架-->
+        <hippo4j-threadpool-config-mode.version>1.5.0</hippo4j-threadpool-config-mode.version>
+        <!--监控与分析框架-->
+        <micrometer-registry-prometheus.version>1.10.6</micrometer-registry-prometheus.version>
     </properties>
 
     <dependencyManagement>
@@ -49,7 +81,89 @@
                 <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-jdbc-core</artifactId>
+                <version>${shardingsphere.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.dozermapper</groupId>
+                <artifactId>dozer-core</artifactId>
+                <version>${dozer-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sdk</groupId>
+                <artifactId>alipay-sdk-java</artifactId>
+                <version>${alipay-sdk-java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hippo4j</groupId>
+                <artifactId>hippo4j-config-spring-boot-starter</artifactId>
+                <version>${hippo4j-threadpool-config-mode.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-registry-prometheus</artifactId>
+                <version>${micrometer-registry-prometheus.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>
