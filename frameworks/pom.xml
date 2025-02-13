@@ -14,7 +14,12 @@
 
     <modules>
         <module>base</module>
+        <module>cache</module>
+        <module>common</module>
         <module>convention</module>
+        <module>database</module>
+        <module>designpattern</module>
+        <module>distributedid</module>
         <module>user</module>
     </modules>
 
