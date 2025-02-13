@@ -67,7 +67,13 @@ public class PageResponse<T> implements Serializable {
         return this;
     }
 
-    public <R> PageResponse<R> setRecords(Function<? super T, ? extends R> mapper) {
+    /**
+     * 类型转换
+     * @param mapper
+     * @return
+     * @param <R>
+     */
+    public <R> PageResponse<R> convert(Function<? super T, ? extends R> mapper) {
         List<R> collect = this.getRecords().stream().map(mapper).collect(Collectors.toList());
         return ((PageResponse<R>) this).setRecords(collect);
     }
