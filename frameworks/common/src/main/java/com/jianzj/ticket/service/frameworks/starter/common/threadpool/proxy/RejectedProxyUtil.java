@@ -5,6 +5,8 @@ package com.jianzj.ticket.service.frameworks.starter.common.threadpool.proxy;
  * @Date 2025/2/14 2:30
  */
 
+import com.jianzj.ticket.service.frameworks.starter.common.tools.ThreadUtil;
+
 import java.lang.reflect.Proxy;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.RejectedExecutionHandler;
