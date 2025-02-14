@@ -12,7 +12,7 @@ import java.util.concurrent.*;
  */
 
 /**
- * TODO 懵 线程池构建器
+ * 线程池构建器
  */
 public final class ThreadPoolBuilder implements Builder<ThreadPoolExecutor> {
 

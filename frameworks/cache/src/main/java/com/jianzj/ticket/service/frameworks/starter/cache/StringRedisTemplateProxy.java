@@ -45,6 +45,7 @@ public class StringRedisTemplateProxy implements DistributedCache {
     @Override
     public <T> T get(String key, Class<T> clazz) {
         String value = stringRedisTemplate.opsForValue().get(key);
+        // 判断目标类型是不是String 不是则要进行反序列化
         if (String.class.isAssignableFrom(clazz)) {
             return (T) value;
         }
@@ -132,16 +133,18 @@ public class StringRedisTemplateProxy implements DistributedCache {
     public <T> T safeGet(String key, Class<T> clazz, CacheLoader<T> cacheLoader, long timeout, TimeUnit timeUnit,
                          RBloomFilter<String> bloomFilter, CacheGetFilter<String> cacheGetFilter, CacheGetIfAbsent<String> cacheGetIfAbsent) {
         T result = get(key, clazz);
-        // 缓存结果不等于空或空字符串直接返回；通过函数判断是否返回空，为了适配布隆过滤器无法删除的场景；两者都不成立，判断布隆过滤器是否存在，不存在返回空
+        // 缓存存在或者布隆过滤器中不存在直接返回
         if (!CacheUtil.isNullOrBlank(result)
                 || Optional.ofNullable(cacheGetFilter).map(each -> each.filter(key)).orElse(false)
                 || Optional.ofNullable(bloomFilter).map(each -> !each.contains(key)).orElse(false)) {
             return result;
         }
+        // 缓存不存在 布隆存在 使用分布式锁去加载缓存
         RLock lock = redissonClient.getLock(SAFE_GET_DISTRIBUTED_LOCK_KEY_PREFIX + key);
         lock.lock();
         try {
             // 双重判定锁，减轻获得分布式锁后线程访问数据库压力
+            // 避免在等待锁的过程中其他线程已加载缓存
             if (CacheUtil.isNullOrBlank(result = get(key, clazz))) {
                 // 如果访问 cacheLoader 加载数据为空，执行后置函数操作
                 if (CacheUtil.isNullOrBlank(result = loadAndSet(key, cacheLoader, timeout, timeUnit, true, bloomFilter))) {

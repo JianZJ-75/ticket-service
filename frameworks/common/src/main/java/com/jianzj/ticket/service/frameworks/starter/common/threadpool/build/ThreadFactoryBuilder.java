@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 
 /**
- * TODO 懵 线程工厂构建器
+ * 线程工厂构建器
  */
 public final class ThreadFactoryBuilder implements Builder<ThreadFactory> {
 
