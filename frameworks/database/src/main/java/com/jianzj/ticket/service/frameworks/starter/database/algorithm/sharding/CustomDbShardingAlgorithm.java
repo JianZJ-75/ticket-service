@@ -42,7 +42,7 @@ public final class CustomDbShardingAlgorithm implements StandardShardingAlgorith
     /**
      * 精确分片
      * @param availableTargetNames  db或者table的集合
-     * @param shardingValue         分片键的值
+     * @param shardingValue         分片键的值 分片字段等信息
      * @return
      */
     @Override

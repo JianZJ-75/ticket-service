@@ -6,15 +6,15 @@ package com.jianzj.ticket.service.frameworks.starter.database.handler;
  */
 
 import com.baomidou.mybatisplus.core.incrementer.IdentifierGenerator;
-import com.jianzj.ticket.service.frameworks.starter.distributedid.tools.SnowFlakeIdUtil;
+import com.jianzj.ticket.service.frameworks.starter.distributedid.tools.SnowflakeIdUtil;
 
 /**
  * 自定义雪花算法生成器
  */
-public class CustomSnowFlakeIdGenerator implements IdentifierGenerator {
+public class CustomSnowflakeIdGenerator implements IdentifierGenerator {
 
     @Override
     public Number nextId(Object entity) {
-        return SnowFlakeIdUtil.nextId();
+        return SnowflakeIdUtil.nextId();
     }
 }

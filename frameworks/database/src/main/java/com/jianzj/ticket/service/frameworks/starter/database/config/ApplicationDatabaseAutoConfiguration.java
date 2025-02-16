@@ -8,7 +8,7 @@ package com.jianzj.ticket.service.frameworks.starter.database.config;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import com.jianzj.ticket.service.frameworks.starter.database.handler.CustomSnowFlakeIdGenerator;
+import com.jianzj.ticket.service.frameworks.starter.database.handler.CustomSnowflakeIdGenerator;
 import com.jianzj.ticket.service.frameworks.starter.database.handler.MyMetaObjectHandler;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -38,8 +38,8 @@ public class ApplicationDatabaseAutoConfiguration {
 
     @Bean
     @Primary
-    public CustomSnowFlakeIdGenerator customSnowFlakeIdGenerator() {
-        return new CustomSnowFlakeIdGenerator();
+    public CustomSnowflakeIdGenerator customSnowflakeIdGenerator() {
+        return new CustomSnowflakeIdGenerator();
     }
 
 }
