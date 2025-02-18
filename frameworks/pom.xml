@@ -20,8 +20,10 @@
         <module>database</module>
         <module>designpattern</module>
         <module>distributedid</module>
+        <module>idempotent</module>
         <module>log</module>
         <module>user</module>
+        <module>web</module>
     </modules>
 
 </project>
