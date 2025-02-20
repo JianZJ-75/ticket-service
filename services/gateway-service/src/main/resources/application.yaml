@@ -1,0 +1,20 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: ticket-service-gateway${unique-name:}-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.86.129:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}

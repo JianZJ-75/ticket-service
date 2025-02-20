@@ -3,6 +3,9 @@ package com.jianzj.ticket.service.biz.gatewayservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 网关服务启动器
+ */
 @SpringBootApplication
 public class GatewayServiceApplication {
 

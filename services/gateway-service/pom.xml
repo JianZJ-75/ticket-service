@@ -76,6 +76,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.jianzj</groupId>
+            <artifactId>ticket-service-user-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
         </dependency>
