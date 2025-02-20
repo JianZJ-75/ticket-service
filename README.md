@@ -26,7 +26,15 @@
 │   └── pom.xml
 ├── resources  || -- # 数据库初始化资源
 │   ├── data  || -- # 数据库数据初始化
-│   └── db  || -- # 数据库初始化
+│   ├── db  || -- # 数据库初始化
+│   └── setinel  || -- # 服务保护
+├── services  || -- # 后端业务项目
+│   ├── gateway-service  || -- # 网关服务
+│   ├── order-service  || -- # 订单服务
+│   ├── pay-service  || -- # 支付服务
+│   ├── ticket-service  || -- # 购票服务
+│   └── user-service  || -- # 用户服务
+│   ├── pom.xml
 ├── web-resources  || -- # 前端资源
 │   ├── nginx  || -- # 前端nginx压缩包
 │   └── starter.txt  || -- # 前端控制台启动步骤
