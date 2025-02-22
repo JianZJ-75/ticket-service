@@ -32,7 +32,7 @@ public final class AbstractChainContext<T> implements CommandLineRunner {
         if (CollectionUtils.isEmpty(abstractChainHolders)) {
             throw new ServiceException(String.format("[%s] Chain of Responsibility ID is undefined.", mark));
         }
-        abstractChainHolders.forEach(each -> each.handle(requestParam));
+        abstractChainHolders.forEach(each -> each.handler(requestParam));
     }
 
     @Override

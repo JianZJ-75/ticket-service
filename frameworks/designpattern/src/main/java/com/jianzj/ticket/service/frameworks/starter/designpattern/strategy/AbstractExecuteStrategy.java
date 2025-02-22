@@ -13,7 +13,7 @@ package com.jianzj.ticket.service.frameworks.starter.designpattern.strategy;
 public interface AbstractExecuteStrategy<REQUEST, RESPONSE> {
 
     /**
-     * 执行测量标识
+     * 执行策略标识
      * @return
      */
     default String mark() {

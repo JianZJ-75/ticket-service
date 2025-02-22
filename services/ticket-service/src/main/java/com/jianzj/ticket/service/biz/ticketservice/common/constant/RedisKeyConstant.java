@@ -91,7 +91,7 @@ public final class RedisKeyConstant {
     public static final String LOCK_PURCHASE_TICKETS_V2 = "${unique-name:}ticket-service-ticket-service:lock:purchase_tickets_%s_%d";
 
     /**
-     * 获取全部地点集合 Key
+     * 获取全部地区集合 Key
      */
     public static final String QUERY_ALL_REGION_LIST = "ticket-service-ticket-service:query_all_region_list";
 

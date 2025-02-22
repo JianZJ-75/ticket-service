@@ -19,7 +19,7 @@ import java.util.Objects;
 public final class UserRegisterParamNotNullChainHandler implements UserRegisterChainFilter<UserRegisterReqDTO> {
 
     @Override
-    public void handle(UserRegisterReqDTO requestParam) {
+    public void handler(UserRegisterReqDTO requestParam) {
         if (Objects.isNull(requestParam.getUsername())) {
             throw new ClientException(UserRegisterErrorCodeEnum.USER_NAME_NOTNULL);
         } else if (Objects.isNull(requestParam.getPassword())) {

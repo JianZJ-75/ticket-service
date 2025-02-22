@@ -17,7 +17,7 @@ public interface AbstractChainHandler<T> extends Ordered {
      * 执行责任链逻辑
      * @param requestParam
      */
-    void handle(T requestParam);
+    void handler(T requestParam);
 
     /**
      * 责任链标识
